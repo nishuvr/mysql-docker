@@ -1,6 +1,2 @@
-FROM mysql 
-EXPOSE 3306
-ENV MYSQL_DATABASE mysqldb
-ENV MYSQL_USER mysql
-ENV MYSQL_PASSWORD password
-ENV MYSQL_ROOT_PASSWORD root
+FROM mysql/mysql-server:8.0.24
+COPY config/user.cnf /etc/mysql/my.cnf
