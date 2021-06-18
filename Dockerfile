@@ -1,3 +1,5 @@
-$ DOCKER_BUILDKIT=1 docker build .
-FROM mysql/mysql-server:8.0.24
-COPY user.cnf /etc/mysql/my.cnf
+FROM mysql 
+ENV MYSQL_DATABASE mysqldb
+ENV MYSQL_USER mysql
+ENV MYSQL_PASSWORD password
+ENV MYSQL_ROOT_PASSWORD root
